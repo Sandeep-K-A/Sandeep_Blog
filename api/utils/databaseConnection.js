@@ -3,9 +3,8 @@ import dotenv from "dotenv";
 
 dotenv.config()
 
-const dbconnectionString = process.env.DATABASE_CONNECTION
 const dbConnection = () => {
-    mongoose.connect(dbconnectionString, {
+    mongoose.connect(process.env.DATABASE_CONNECTION, {
         dbName: 'Sandeep_Blog',
     }).then(() => {
         console.log("Database connected successfully...")
